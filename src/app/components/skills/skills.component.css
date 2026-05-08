@@ -1,0 +1,36 @@
+.section {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 20px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+}
+
+.skill-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 14px 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+  transition: transform .2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+}
+
+.skill-card img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.skill-card span {
+  font-weight: 500;
+}
