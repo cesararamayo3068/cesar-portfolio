@@ -1,12 +1,45 @@
 .section {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 80px auto;
   padding: 20px;
 }
 
+.eyebrow {
+  margin: 0 0 10px;
+  color: #4f46e5;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.section h2 {
+  margin: 0 0 28px;
+  color: #111827;
+  font-size: 34px;
+}
+
+.skills-groups {
+  display: grid;
+  gap: 18px;
+}
+
+.skill-group {
+  padding: 22px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  background: #f8fafc;
+}
+
+.skill-group h3 {
+  margin: 0 0 16px;
+  color: #334155;
+  font-size: 18px;
+}
+
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 16px;
 }
 
@@ -31,6 +64,35 @@
   object-fit: contain;
 }
 
+.skill-initial {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #e0f2fe;
+  color: #075985;
+  font-size: 13px;
+  font-weight: 800;
+}
+
 .skill-card span {
   font-weight: 500;
+}
+
+:host-context(body.dark-mode) .section h2,
+:host-context(body.dark-mode) .skill-group h3 {
+  color: #f8fafc;
+}
+
+:host-context(body.dark-mode) .skill-group {
+  background: #1f2937;
+  border-color: #334155;
+}
+
+:host-context(body.dark-mode) .skill-initial {
+  background: #0f172a;
+  color: #bae6fd;
 }

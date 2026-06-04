@@ -2,11 +2,16 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  background: rgba(17, 24, 39, .92);
+  color: white;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 1px 0 rgba(255,255,255,.08);
 }
 
 .logo {
   font-weight: 700;
   font-size: 20px;
+  margin-right: 28px;
 }
 
 .spacer {
@@ -17,9 +22,32 @@ a {
   color: white;
   text-decoration: none;
   margin-right: 20px;
+  font-size: 15px;
 }
 
-body.dark-mode {
-  background: #111827;
+button {
   color: white;
+}
+
+@media (max-width: 720px) {
+  .navbar {
+    min-height: auto;
+    height: auto;
+    padding: 10px 14px;
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .logo {
+    width: calc(100% - 48px);
+  }
+
+  .spacer {
+    display: none;
+  }
+
+  a:not(.logo) {
+    margin-right: 14px;
+    font-size: 14px;
+  }
 }

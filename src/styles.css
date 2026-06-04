@@ -1,3 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #111827;
+}
+
 body.dark-mode {
   background: #111827;
   color: white;
@@ -18,4 +28,34 @@ body.dark-mode .skill-card {
 
 body.dark-mode .skill-card span {
   color: white;
+}
+
+body.dark-mode .professional-summary h2,
+body.dark-mode .section-heading h2,
+body.dark-mode .section h2,
+body.dark-mode .project-card h3,
+body.dark-mode .skill-group h3 {
+  color: white;
+}
+
+body.dark-mode .professional-summary > p,
+body.dark-mode .project-card p,
+body.dark-mode .section p:not(.eyebrow) {
+  color: #cbd5e1;
+}
+
+body.dark-mode .project-card,
+body.dark-mode .skill-group {
+  background: #1f2937;
+  border-color: #334155;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #f8fafc;
+}
+
+body.dark-mode .mat-mdc-card {
+  border-color: #334155;
 }

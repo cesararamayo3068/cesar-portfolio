@@ -1,5 +1,5 @@
-<mat-toolbar color="primary" class="navbar">
-  <span class="logo">Cesar Aramayo</span>
+<mat-toolbar class="navbar">
+  <a class="logo" href="#">César Aramayo</a>
 
   <span class="spacer"></span>
 
@@ -8,7 +8,7 @@
   <a href="#projects">Proyectos</a>
   <a href="#contact">Contacto</a>
 
-  <button mat-button (click)="toggleTheme()">
-    {{ darkMode ? '☀' : '🌙' }}
+  <button mat-icon-button type="button" (click)="toggleTheme()" aria-label="Cambiar tema">
+    <mat-icon>{{ darkMode ? 'light_mode' : 'dark_mode' }}</mat-icon>
   </button>
 </mat-toolbar>
