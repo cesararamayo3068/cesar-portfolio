@@ -1,14 +1,1 @@
-<mat-toolbar class="navbar">
-  <a class="logo" href="#">César Aramayo</a>
-
-  <span class="spacer"></span>
-
-  <a href="#experience">Experiencia</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Proyectos</a>
-  <a href="#contact">Contacto</a>
-
-  <button mat-icon-button type="button" (click)="toggleTheme()" aria-label="Cambiar tema">
-    <mat-icon>{{ darkMode ? 'light_mode' : 'dark_mode' }}</mat-icon>
-  </button>
-</mat-toolbar>
+<header class="navbar"><div class="nav-inner"><a class="logo" href="#home" (click)="closeMenu()"><span class="logo-mark">CA<span>.</span></span><span class="logo-name">César Aramayo</span></a><nav id="main-navigation" [class.open]="menuOpen" aria-label="Navegación principal"><a *ngFor="let link of links" [href]="link.href" (click)="closeMenu()">{{link.label}}</a></nav><div class="nav-actions"><button class="theme-toggle" type="button" (click)="toggleTheme()" [attr.aria-label]="darkMode?'Activar modo claro':'Activar modo oscuro'" [attr.title]="darkMode?'Modo claro':'Modo oscuro'"><mat-icon>{{darkMode?'light_mode':'dark_mode'}}</mat-icon></button><button class="menu-toggle" type="button" (click)="menuOpen=!menuOpen" [attr.aria-expanded]="menuOpen" aria-controls="main-navigation" aria-label="Abrir o cerrar menú"><mat-icon>{{menuOpen?'close':'menu'}}</mat-icon></button></div></div></header>
